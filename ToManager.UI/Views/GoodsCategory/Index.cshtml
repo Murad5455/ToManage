@@ -1,0 +1,31 @@
+﻿@using ToManage.EntityLayer;
+@model List<GoodsCategory>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<table class="table table-bordered">
+    <tr>
+     
+        <th>Kateqori id</th>
+        <th>Kateqori adi</th>
+        <th>Guncelle</th>
+        <th>Sil</th>
+    </tr>
+    @foreach(var item in Model)
+    {
+      
+        <tr>
+           
+            <td>@item.GoodsCategoryId</td>
+            <td>@item.CategoryName</td>
+            <td> <a href="/GoodsCategory/GetCategoryUpdate/@item.GoodsCategoryId/" class="btn btn-warning">Guncelle</a>  </td>
+            <td> <a href="/GoodsCategory/ChangeStatusDelete/@item.GoodsCategoryId" class="btn btn-danger">Sil</a>  </td>
+        </tr>
+    }
+
+</table>
+<a href="/GoodsCategory/GetAddGoodsCategory/" class="btn btn-info">Elave et</a>
+

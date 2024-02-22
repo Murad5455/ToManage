@@ -1,0 +1,25 @@
+﻿@model ToManage.EntityLayer.CategoryDetail;
+@{
+    ViewData["Title"] = "GetUpdateCategoryDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("UpdateCategoryDetails", "CategoryDetail", FormMethod.Post))
+{
+    <br />
+    <b>ID</b>
+    @Html.TextBoxFor(x => x.CategoryDetailId, new { @class = "form-control" })
+
+    <b>Kateqoriya detail adi</b>
+    @Html.TextBoxFor(x => x.CategoryDetailName, new { @class = "form-control" })
+
+
+      <br />
+    <b>Kateqori adi || id</b>
+    @Html.TextBoxFor(x => x.GoodsCategoryId, new { @class = "form-control" })
+
+
+    <br />
+    <button class="btn btn-info"> Guncelle </button>
+
+}

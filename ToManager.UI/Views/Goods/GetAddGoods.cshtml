@@ -1,0 +1,47 @@
+﻿@model ToManage.EntityLayer.Goods;
+
+@{
+    ViewData["Title"] = "GetAddGoods";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("GoodsAdd", "Goods", FormMethod.Post))
+{
+    <br />
+
+    @*   <b>Id</b>
+    @Html.TextBoxFor(x => x.GoodsCategoryId, new { @class = "form-control" })
+*@
+    <br />
+    <b>Kateqoriya detail adi</b>
+    @Html.TextBoxFor(x => x.GoodsId, new { @class = "form-control" })
+
+
+    <br />
+    <b>Adi</b>
+    @Html.TextBoxFor(x => x.GoodsName, new { @class = "form-control" })
+
+    <br />
+    <b>Miqdari</b>
+    @Html.TextBoxFor(x => x.GoodsNumber, new { @class = "form-control" })
+
+    <br />
+    <b>Depodaki miqdari</b>
+    @Html.TextBoxFor(x => x.GoodsCount, new { @class = "form-control" })
+
+    <br />
+    <b>Alis qiymeti</b>
+    @Html.TextBoxFor(x => x.BuyPrice, new { @class = "form-control" })
+
+     <br />
+    <b>Satis qiymeti</b>
+    @Html.TextBoxFor(x => x.GoodsName, new { @class = "form-control" })
+
+    <br />
+    <b>Kateqori detail adi || id</b>
+    @Html.TextBoxFor(x => x.CategoryDetailId, new { @class = "form-control" })
+
+    <br />
+    <button class="btn btn-info"> Elave et </button>
+
+}

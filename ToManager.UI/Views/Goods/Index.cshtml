@@ -1,0 +1,38 @@
+﻿@using ToManage.EntityLayer;
+@model List<Goods>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Adi</th>
+        <th>Sayi || Olcusu</th>
+        <th>Depodaki sayi</th>
+        <th>Satis qiymeti</th>
+        <th>Alis qiymeti</th>
+        <th>Kateqori adi || Id</th>
+        <th>Guncelle</th>
+        <th>Sil</th>
+    </tr>
+    @foreach(var item in Model)
+    {
+        <tr>
+            <td>@item.GoodsId</td>
+            <td>@item.GoodsName</td>
+            <td>@item.GoodsNumber</td>
+            <td>@item.GoodsCount</td>
+            <td>@item.SellPrice</td>
+            <td>@item.BuyPrice</td>
+            <td>@item.CategoryDetailId</td>
+            <td><a href="/Goods/GetUpdateGoods/@item.GoodsId/" class="btn btn-warning">Guncelle</a></td>
+            <td><a href="/Goods/DeleteGoods/@item.GoodsId/" class="btn btn-danger">Sil</a></td>
+            <td>></td>
+        </tr>
+    }
+
+</table>
+
+<a href="/Goods/GetAddGoods/"class="btn btn-info">Elave et</a>

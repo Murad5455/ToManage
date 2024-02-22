@@ -1,0 +1,28 @@
+﻿@model ToManage.EntityLayer.CategoryDetail;
+@{
+    ViewData["Title"] = "GetAddCategoryDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@using (Html.BeginForm("AddCategoryDetails", "CategoryDetail", FormMethod.Post))
+{
+    <br />
+
+    @*   <b>Id</b>
+    @Html.TextBoxFor(x => x.GoodsCategoryId, new { @class = "form-control" })
+*@
+    <br />
+    <b>Kateqoriya detail adi</b>
+    @Html.TextBoxFor(x => x.CategoryDetailName, new { @class = "form-control" })
+
+
+    <br />
+    <b>Kateqori adi || id</b>
+    @Html.TextBoxFor(x => x.GoodsCategoryId, new { @class = "form-control" })
+
+
+    <br />
+    <button class="btn btn-info"> Elave et </button>
+
+}
